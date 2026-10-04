@@ -185,6 +185,14 @@ export const PEOPLE: {
       linkedin: "https://www.linkedin.com/in/inbasekaran-s-106a90383",
       tint: "navy",
     },
+    {
+      name: "Vinoth Nandakumar",
+      role: "Researcher",
+      focus: "PhD in Mathematics, MIT",
+      github: "https://github.com/bruce12-glitch",
+      scholar: scholarSearch("Vinoth Nandakumar"),
+      tint: "gold",
+    },
   ],
   alumni: [],
 };
@@ -241,7 +249,7 @@ export const NEWS: NewsItem[] = [
 export const stats = [
   { value: "3", label: "open-source systems" },
   { value: "Soon", label: "publications — being added" },
-  { value: "1", label: "researcher" },
+  { value: "2", label: "researchers" },
   { value: "100%", label: "code released open" },
 ];
 
