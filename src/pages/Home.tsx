@@ -2,6 +2,7 @@ import { ArrowRight, ArrowUpRight, Mail, FileText, Code2 } from "lucide-react";
 import { Link } from "../router";
 import { Reveal } from "../components/Reveal";
 import { HeroScene } from "../components/HeroScene";
+import { AttentionMotif } from "../components/Diagrams";
 import { GithubIcon } from "../components/icons";
 import { SITE, PROJECTS, PAPERS, PEOPLE, NEWS, stats } from "../data/lab";
 
@@ -94,23 +95,12 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={140}>
-          <dl className="grid grid-cols-2 gap-4">
-            {PROJECTS.map((p) => (
-              <div key={p.id} className="card-3d rounded-2xl border border-line bg-paper/85 p-5 shadow-card backdrop-blur-sm">
-                <dt className="font-mono text-[10px] tracking-[0.18em] text-gold uppercase">{p.tag}</dt>
-                <dd className="mt-1.5 font-serif text-xl font-medium text-ink">{p.name}</dd>
-                <dd className="mt-1 font-mono text-[10px] tracking-[0.12em] text-inkmute uppercase">{p.area}</dd>
-                <dd className="mt-3 font-serif text-2xl font-medium text-navy">{p.metrics[0]?.value}</dd>
-                <dd className="font-mono text-[10px] tracking-[0.1em] text-inksoft uppercase">{p.metrics[0]?.label}</dd>
-              </div>
-            ))}
-            <div className="card-3d flex flex-col justify-center rounded-2xl border border-dashed border-linedeep bg-paper/60 p-5 backdrop-blur-sm">
-              <p className="font-serif text-lg text-inksoft italic">Papers &amp; traces, all open.</p>
-              <Link to="publications" className="u-line-out mt-2 inline-flex w-fit items-center gap-1 font-mono text-[11px] tracking-wider text-navy uppercase">
-                Browse <ArrowRight size={13} />
-              </Link>
-            </div>
-          </dl>
+          <figure className="card-3d rounded-2xl border border-line bg-paper/90 p-5 shadow-card backdrop-blur-sm sm:p-7">
+            <AttentionMotif />
+            <figcaption className="mt-4 border-t border-line pt-4 font-mono text-[10.5px] tracking-[0.14em] text-inkmute uppercase">
+              Sparse attention × tiered KV pages — the loop, visualized
+            </figcaption>
+          </figure>
         </Reveal>
       </div>
 
