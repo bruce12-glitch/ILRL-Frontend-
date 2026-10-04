@@ -9,7 +9,7 @@ export const SITE = {
   longName: "Inference in Loops and Recurrent Learning Labs",
   tagline: "Systems for efficient LLM inference, built in the loop.",
   email: "inba.research.ilrl.labs@gmail.com",
-  github: "https://github.com/bruce12-glitch/ILRL",
+  github: "https://github.com/bruce12-glitch",
   githubOrg: "https://github.com/bruce12-glitch",
   frontendRepo: "https://github.com/bruce12-glitch/ILRL-Frontend-",
   backendRepo: "https://github.com/bruce12-glitch/ILRL-Backend",
