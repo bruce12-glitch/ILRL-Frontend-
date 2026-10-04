@@ -140,37 +140,17 @@ body {
 @keyframes iso-breathe {
   0%, 100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
   50% {
-    opacity: 0.82;
-    transform: translateY(-5px) scale(1.07);
+    opacity: 0.65;
+    transform: translateY(1.5px);
   }
 }
 
 .kvcell {
   animation: iso-breathe var(--dur, 6s) ease-in-out infinite;
   animation-delay: var(--del, 0ms);
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-@keyframes kv-drift {
-  0%, 100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  50% {
-    opacity: 0.75;
-    transform: translate(4px, -3px);
-  }
-}
-
-.kvpage {
-  animation: kv-drift var(--dur, 7s) ease-in-out infinite;
-  animation-delay: var(--del, 0ms);
-  transform-box: fill-box;
-  transform-origin: center;
 }
 
 /* ── 3D card lift on hover ────────────────────────────────────────────── */
@@ -211,9 +191,6 @@ body {
     transition: none;
   }
   .kvcell {
-    animation: none;
-  }
-  .kvpage {
     animation: none;
   }
   .page-enter {
