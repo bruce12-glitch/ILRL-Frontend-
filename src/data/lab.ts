@@ -178,7 +178,7 @@ export const PEOPLE: {
   team: [
     {
       name: "Inbasekaran S",
-      role: "Researcher",
+      role: "Founder & Researcher",
       focus: "LLM Inference and ML systems",
       github: "https://github.com/bruce12-glitch",
       scholar: scholarSearch("Inbasekaran S"),
