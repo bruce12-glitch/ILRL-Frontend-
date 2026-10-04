@@ -155,8 +155,8 @@ export interface Person {
   name: string;
   role: string;
   focus: string;
-  github: string;
-  scholar: string;
+  github?: string;
+  scholar?: string;
   linkedin?: string;
   tint: "navy" | "gold" | "cream";
   /** alumni only */
@@ -179,7 +179,6 @@ export const PEOPLE: {
       name: "Vinoth Nandakumar",
       role: "Research Mentor",
       focus: "PhD in Mathematics, MIT",
-      github: "https://github.com/bruce12-glitch",
       scholar: "https://scholar.google.com/citations?user=SKq_-mgAAAAJ&hl=en",
       linkedin: "https://www.linkedin.com/in/vinoth-nandakumar-07456b149/",
       tint: "gold",

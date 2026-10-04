@@ -65,6 +65,7 @@ function PersonCard({ person, big }: { person: Person; big?: boolean }) {
         </div>
       </div>
       <div className="mt-5 flex items-center gap-2.5 border-t border-line pt-4">
+        {person.github && (
         <a
           href={person.github}
           target="_blank"
@@ -75,6 +76,8 @@ function PersonCard({ person, big }: { person: Person; big?: boolean }) {
           <GithubIcon size={14} />
           GitHub
         </a>
+        )}
+        {person.scholar && (
         <a
           href={person.scholar}
           target="_blank"
@@ -85,6 +88,7 @@ function PersonCard({ person, big }: { person: Person; big?: boolean }) {
           <GraduationCap size={15} />
           Scholar
         </a>
+        )}
         {person.linkedin && (
           <a
             href={person.linkedin}
