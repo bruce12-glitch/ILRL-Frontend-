@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight, Mail, FileText, Code2 } from "lucide-react";
 import { Link } from "../router";
 import { Reveal } from "../components/Reveal";
-import { AttentionMotif } from "../components/Diagrams";
+import { HeroScene } from "../components/HeroScene";
 import { GithubIcon } from "../components/icons";
 import { SITE, PROJECTS, PAPERS, PEOPLE, NEWS, stats } from "../data/lab";
 
@@ -42,8 +42,19 @@ function SectionHead({
 /* ── Hero ─────────────────────────────────────────────────────────────── */
 function Hero() {
   return (
-    <section className="hairline-b">
-      <div className={`${container} grid gap-12 pt-14 pb-12 sm:pt-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center`}>
+    <section className="hairline-b relative overflow-hidden">
+      {/* animated 3D field + legibility wash */}
+      <HeroScene className="pointer-events-none absolute inset-0 h-full w-full" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(100deg, var(--color-paper) 22%, color-mix(in srgb, var(--color-paper) 82%, transparent) 46%, transparent 75%)",
+        }}
+      />
+
+      <div className={`${container} relative grid gap-12 pt-14 pb-12 sm:pt-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center`}>
         <Reveal>
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-gold" />
@@ -74,17 +85,47 @@ function Hero() {
             </Link>
             <Link
               to="publications"
-              className="inline-flex items-center gap-2 rounded-full border border-linedeep px-6 py-3 text-[0.95rem] font-medium text-ink transition-colors duration-300 hover:border-ink"
+              className="inline-flex items-center gap-2 rounded-full border border-linedeep bg-paper/70 px-6 py-3 text-[0.95rem] font-medium text-ink backdrop-blur-sm transition-colors duration-300 hover:border-ink"
             >
               Read the papers
             </Link>
           </div>
+
+          <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11.5px] tracking-wider text-inkmute uppercase">
+            <span className="inline-flex items-center gap-1.5">
+              <GithubIcon size={13} />
+              Code
+            </span>
+            <a href={SITE.frontendRepo} target="_blank" rel="noreferrer" className="u-line-out inline-flex items-center gap-1 text-navy">
+              Frontend <ArrowUpRight size={12} />
+            </a>
+            <a href={SITE.backendRepo} target="_blank" rel="noreferrer" className="u-line-out inline-flex items-center gap-1 text-navy">
+              Backend <ArrowUpRight size={12} />
+            </a>
+            <a href={SITE.githubOrg} target="_blank" rel="noreferrer" className="u-line-out inline-flex items-center gap-1 text-navy">
+              Organization <ArrowUpRight size={12} />
+            </a>
+          </p>
         </Reveal>
 
         <Reveal delay={140}>
-          <figure className="card-3d rounded-2xl border border-line bg-white p-5 shadow-card sm:p-7">
-            <AttentionMotif />
-          </figure>
+          <dl className="grid grid-cols-2 gap-4">
+            {PROJECTS.map((p) => (
+              <div key={p.id} className="card-3d rounded-2xl border border-line bg-paper/85 p-5 shadow-card backdrop-blur-sm">
+                <dt className="font-mono text-[10px] tracking-[0.18em] text-gold uppercase">{p.tag}</dt>
+                <dd className="mt-1.5 font-serif text-xl font-medium text-ink">{p.name}</dd>
+                <dd className="mt-1 font-mono text-[10px] tracking-[0.12em] text-inkmute uppercase">{p.area}</dd>
+                <dd className="mt-3 font-serif text-2xl font-medium text-navy">{p.metrics[0]?.value}</dd>
+                <dd className="font-mono text-[10px] tracking-[0.1em] text-inksoft uppercase">{p.metrics[0]?.label}</dd>
+              </div>
+            ))}
+            <div className="card-3d flex flex-col justify-center rounded-2xl border border-dashed border-linedeep bg-paper/60 p-5 backdrop-blur-sm">
+              <p className="font-serif text-lg text-inksoft italic">Papers &amp; traces, all open.</p>
+              <Link to="publications" className="u-line-out mt-2 inline-flex w-fit items-center gap-1 font-mono text-[11px] tracking-wider text-navy uppercase">
+                Browse <ArrowRight size={13} />
+              </Link>
+            </div>
+          </dl>
         </Reveal>
       </div>
 
@@ -235,6 +276,7 @@ function News() {
 /* ── Selected publications ────────────────────────────────────────────── */
 function SelectedPubs() {
   const selected = PAPERS.filter((p) => p.selected);
+  if (selected.length === 0) return null;
   return (
     <section className="hairline-b">
       <div className={`${container} py-16 sm:py-20`}>
@@ -313,8 +355,7 @@ function PeoplePreview() {
             Small team, deep loop.
           </h2>
           <p className="mt-3 text-[0.95rem] leading-relaxed text-inksoft">
-            Two mentors, five researchers, one shared conviction: inference systems should be
-            designed around recurrence.
+            A focused lab growing around LLM inference and ML systems.
           </p>
         </Reveal>
         <Reveal delay={120} className="flex items-center gap-6">
@@ -379,7 +420,7 @@ function JoinCta() {
                   {SITE.email}
                 </a>
                 <a
-                  href={SITE.github}
+                  href={SITE.frontendRepo}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-paper/30 px-6 py-3 text-[0.95rem] font-medium text-paper transition-colors duration-300 hover:border-paper hover:text-paper"

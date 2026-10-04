@@ -11,6 +11,8 @@ export const SITE = {
   email: "hello@ilrl.dev",
   github: "https://github.com/bruce12-glitch/ILRL",
   githubOrg: "https://github.com/bruce12-glitch",
+  frontendRepo: "https://github.com/bruce12-glitch/ILRL-Frontend-",
+  backendRepo: "https://github.com/bruce12-glitch/ILRL-Backend",
   founded: "2025",
 };
 

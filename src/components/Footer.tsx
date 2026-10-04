@@ -69,19 +69,23 @@ export function Footer() {
             <h3 className="eyebrow !text-paper/45">Connect</h3>
             <ul className="mt-5 space-y-3 text-[0.95rem]">
               <li>
-                <a href={SITE.github} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-paper/75 hover:text-paper">
+                <a href={SITE.githubOrg} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-paper/75 hover:text-paper">
                   <GithubIcon size={15} className="text-paper/45 transition-colors group-hover:text-paper" />
-                  GitHub
+                  Organization
                   <ArrowUpRight size={12} className="text-paper/35" />
                 </a>
               </li>
               <li>
-                <a href="https://arxiv.org/abs/2603.01421" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-paper/75 hover:text-paper">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-paper/45 transition-colors group-hover:text-paper">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z" />
-                    <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5" />
-                  </svg>
-                  arXiv
+                <a href={SITE.frontendRepo} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-paper/75 hover:text-paper">
+                  <GithubIcon size={15} className="text-paper/45 transition-colors group-hover:text-paper" />
+                  Frontend repo
+                  <ArrowUpRight size={12} className="text-paper/35" />
+                </a>
+              </li>
+              <li>
+                <a href={SITE.backendRepo} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-paper/75 hover:text-paper">
+                  <GithubIcon size={15} className="text-paper/45 transition-colors group-hover:text-paper" />
+                  Backend repo
                   <ArrowUpRight size={12} className="text-paper/35" />
                 </a>
               </li>
