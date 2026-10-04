@@ -91,21 +91,6 @@ function Hero() {
             </Link>
           </div>
 
-          <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11.5px] tracking-wider text-inkmute uppercase">
-            <span className="inline-flex items-center gap-1.5">
-              <GithubIcon size={13} />
-              Code
-            </span>
-            <a href={SITE.frontendRepo} target="_blank" rel="noreferrer" className="u-line-out inline-flex items-center gap-1 text-navy">
-              Frontend <ArrowUpRight size={12} />
-            </a>
-            <a href={SITE.backendRepo} target="_blank" rel="noreferrer" className="u-line-out inline-flex items-center gap-1 text-navy">
-              Backend <ArrowUpRight size={12} />
-            </a>
-            <a href={SITE.githubOrg} target="_blank" rel="noreferrer" className="u-line-out inline-flex items-center gap-1 text-navy">
-              Organization <ArrowUpRight size={12} />
-            </a>
-          </p>
         </Reveal>
 
         <Reveal delay={140}>
