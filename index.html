@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ───────────────────────── Meta Title & Description Blueprint ───────────────────────── -->
+    <title>ILRL — Inference-in-Loop &amp; Recurrence Lab | Efficient LLM Inference &amp; ML Systems</title>
+    <meta
+      name="description"
+      content="ILRL (Inference-in-Loop & Recurrence Lab) builds open systems for efficient LLM inference: EntroPrefill for mitigating long-context quadratic prefill latency, Page-EntroKV for breaking KV-cache memory walls, and RecLoop for low-latency inference-in-loop serving. Papers, code, and people."
+    />
+    <meta
+      name="keywords"
+      content="ILRL, Inference-in-Loop and Recurrence Lab, LLM inference, ML systems, KV-cache memory wall, prefill latency, sparse attention, continuous batching, LLM serving, EntroPrefill, Page-EntroKV, RecLoop"
+    />
+    <meta name="author" content="Inference-in-Loop &amp; Recurrence Lab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://bruce12-glitch.github.io/ILRL/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ILRL — Inference-in-Loop &amp; Recurrence Lab" />
+    <meta property="og:title" content="ILRL — Inference-in-Loop &amp; Recurrence Lab" />
+    <meta
+      property="og:description"
+      content="Open systems for efficient LLM inference: EntroPrefill, Page-EntroKV, and RecLoop — research papers, source code, and people."
+    />
+    <meta property="og:image" content="https://bruce12-glitch.github.io/ILRL/og.jpg" />
+    <meta property="og:image:alt" content="ILRL — Inference-in-Loop & Recurrence Lab wordmark with attention-matrix motif" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ILRL — Inference-in-Loop &amp; Recurrence Lab" />
+    <meta
+      name="twitter:description"
+      content="Open systems for efficient LLM inference: mitigating long-context quadratic prefill latency and breaking KV-cache memory walls."
+    />
+    <meta name="twitter:image" content="og.jpg" />
+
+    <meta name="theme-color" content="#191712" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ───────────────────────── Scholarly Schema Markup (JSON-LD) ───────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ResearchOrganization",
+          "@id": "#ilrl",
+          "name": "Inference-in-Loop & Recurrence Lab",
+          "alternateName": "ILRL · Inference in Loops and Recurrent Learning Labs",
+          "description": "An open research lab working on efficient LLM inference and ML systems: prefill latency, KV-cache memory orchestration, and inference-in-loop serving.",
+          "foundingDate": "2025",
+          "email": "hello@ilrl.dev",
+          "sameAs": ["https://github.com/bruce12-glitch/ILRL", "https://github.com/bruce12-glitch"],
+          "knowsAbout": [
+            "LLM inference",
+            "long-context prefill latency",
+            "KV-cache memory walls",
+            "sparse attention",
+            "continuous batching",
+            "ML systems"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "ILRL — Inference-in-Loop & Recurrence Lab",
+          "url": "https://bruce12-glitch.github.io/ILRL/",
+          "publisher": { "@id": "#ilrl" }
+        },
+        {
+          "@type": "ItemList",
+          "name": "ILRL Publications",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "headline": "Page-EntroKV: Entropy-Tiered Paged KV-Cache Compression for Breaking the Memory Wall in Long-Context LLM Inference",
+                "datePublished": "2026-03",
+                "isAccessibleForFree": true,
+                "url": "https://arxiv.org/abs/2603.01421",
+                "author": [
+                  { "@type": "Person", "name": "Bruce Raman", "sameAs": "https://github.com/bruce12-glitch" },
+                  { "@type": "Person", "name": "Priya Nair" },
+                  { "@type": "Person", "name": "Sara Okonkwo" },
+                  { "@type": "Person", "name": "Ananya Iyer" }
+                ],
+                "publisher": { "@id": "#ilrl" },
+                "keywords": "KV-cache memory wall, paged attention, entropy-tiered quantization, long-context inference"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "headline": "RecLoop: Inference-in-Loop Scheduling with Recurrence-Aware Continuous Batching for Low-Latency LLM Serving",
+                "datePublished": "2026-01",
+                "isAccessibleForFree": true,
+                "url": "https://arxiv.org/abs/2601.00887",
+                "author": [
+                  { "@type": "Person", "name": "Leo Zhang" },
+                  { "@type": "Person", "name": "Bruce Raman" },
+                  { "@type": "Person", "name": "Aditi Verma" },
+                  { "@type": "Person", "name": "Marcus Feld" }
+                ],
+                "publisher": { "@id": "#ilrl" },
+                "keywords": "inference-in-loop scheduling, continuous batching, SLO-aware serving, decode latency"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "headline": "EntroPrefill: Mitigating Long-Context Quadratic Prefill Latency via Entropy-Guided Sparse Attention",
+                "datePublished": "2025-12",
+                "isAccessibleForFree": true,
+                "url": "https://arxiv.org/abs/2512.03310",
+                "author": [
+                  { "@type": "Person", "name": "Bruce Raman" },
+                  { "@type": "Person", "name": "Aditi Verma" },
+                  { "@type": "Person", "name": "Ananya Iyer" }
+                ],
+                "publisher": { "@id": "#ilrl" },
+                "keywords": "quadratic prefill latency, sparse attention, entropy-guided attention, time-to-first-token"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "headline": "Beyond the Memory Wall: A Systems Survey of KV-Cache Management for Efficient LLM Serving",
+                "datePublished": "2025-10",
+                "isAccessibleForFree": true,
+                "url": "https://arxiv.org/abs/2510.05241",
+                "author": [
+                  { "@type": "Person", "name": "Sara Okonkwo" },
+                  { "@type": "Person", "name": "Priya Nair" },
+                  { "@type": "Person", "name": "Marcus Feld" }
+                ],
+                "publisher": { "@id": "#ilrl" },
+                "keywords": "KV-cache management, LLM serving systems, memory orchestration, survey"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "headline": "Tokens per Second Are Not Free: Characterizing Throughput-Latency Trade-offs in Continuous-Batch LLM Inference",
+                "datePublished": "2025-07",
+                "isAccessibleForFree": true,
+                "url": "https://arxiv.org/abs/2507.01158",
+                "author": [
+                  { "@type": "Person", "name": "Leo Zhang" },
+                  { "@type": "Person", "name": "Ananya Iyer" }
+                ],
+                "publisher": { "@id": "#ilrl" },
+                "keywords": "continuous batching, throughput-latency trade-off, LLM measurement study"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "headline": "EntroCache: Entropy-Aware Eviction for Multi-Turn Dialogue KV Reuse",
+                "datePublished": "2025-05",
+                "isAccessibleForFree": true,
+                "url": "https://arxiv.org/abs/2505.04472",
+                "author": [
+                  { "@type": "Person", "name": "Aditi Verma" },
+                  { "@type": "Person", "name": "Bruce Raman" }
+                ],
+                "publisher": { "@id": "#ilrl" },
+                "keywords": "KV-cache reuse, multi-turn dialogue, eviction policy"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      ILRL — Inference-in-Loop &amp; Recurrence Lab. Open systems for efficient LLM inference:
+      EntroPrefill (long-context prefill latency), Page-EntroKV (KV-cache memory walls), and
+      RecLoop (inference-in-loop serving). Find our papers on arXiv and code on GitHub at
+      github.com/bruce12-glitch/ILRL.
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
