@@ -46,6 +46,17 @@ function PersonCard({ person, big }: { person: Person; big?: boolean }) {
       )}
     >
       <div className="flex items-start gap-4">
+        {person.photo ? (
+          <img
+            src={person.photo}
+            alt={`Portrait of ${person.name}`}
+            loading="lazy"
+            className={cn(
+              "shrink-0 rounded-full object-cover",
+              big ? "h-16 w-16" : "h-13 w-13"
+            )}
+          />
+        ) : (
         <span
           className={cn(
             "flex shrink-0 items-center justify-center rounded-full font-serif font-semibold",
@@ -56,6 +67,7 @@ function PersonCard({ person, big }: { person: Person; big?: boolean }) {
         >
           {initialsOf(person.name)}
         </span>
+        )}
         <div className="min-w-0">
           <h3 className={cn("font-serif leading-tight font-medium text-ink", big ? "text-[1.45rem]" : "text-[1.25rem]")}>
             {person.name}

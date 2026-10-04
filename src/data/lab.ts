@@ -158,6 +158,8 @@ export interface Person {
   github?: string;
   scholar?: string;
   linkedin?: string;
+  /** relative path under public/, e.g. "people/inba.jpg" */
+  photo?: string;
   tint: "navy" | "gold" | "cream";
   /** alumni only */
   now?: string;
@@ -181,6 +183,7 @@ export const PEOPLE: {
       focus: "PhD in Mathematics, MIT",
       scholar: "https://scholar.google.com/citations?user=SKq_-mgAAAAJ&hl=en",
       linkedin: "https://www.linkedin.com/in/vinoth-nandakumar-07456b149/",
+      photo: "people/vinu.jpg",
       tint: "gold",
     },
   ],
@@ -192,6 +195,7 @@ export const PEOPLE: {
       github: "https://github.com/bruce12-glitch",
       scholar: scholarSearch("Inbasekaran S"),
       linkedin: "https://www.linkedin.com/in/inbasekaran-s-106a90383",
+      photo: "people/inba.jpg",
       tint: "navy",
     },
   ],

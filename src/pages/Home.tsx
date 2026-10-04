@@ -336,6 +336,16 @@ function PeoplePreview() {
         <Reveal delay={120} className="flex items-center gap-6">
           <div className="flex -space-x-3">
             {members.map((m) => (
+              m.photo ? (
+                <img
+                  key={m.name}
+                  src={m.photo}
+                  alt={`Portrait of ${m.name}`}
+                  title={m.name}
+                  loading="lazy"
+                  className="h-12 w-12 rounded-full border-2 border-paper object-cover shadow-card"
+                />
+              ) : (
               <span
                 key={m.name}
                 title={m.name}
@@ -343,6 +353,7 @@ function PeoplePreview() {
               >
                 {initials(m.name)}
               </span>
+              )
             ))}
           </div>
           <Link
