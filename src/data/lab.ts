@@ -174,7 +174,17 @@ export const PEOPLE: {
   team: Person[];
   alumni: Person[];
 } = {
-  faculty: [],
+  faculty: [
+    {
+      name: "Vinoth Nandakumar",
+      role: "Research Mentor",
+      focus: "PhD in Mathematics, MIT",
+      github: "https://github.com/bruce12-glitch",
+      scholar: "https://scholar.google.com/citations?user=SKq_-mgAAAAJ&hl=en",
+      linkedin: "https://www.linkedin.com/in/vinoth-nandakumar-07456b149/",
+      tint: "gold",
+    },
+  ],
   team: [
     {
       name: "Inbasekaran S",
@@ -184,14 +194,6 @@ export const PEOPLE: {
       scholar: scholarSearch("Inbasekaran S"),
       linkedin: "https://www.linkedin.com/in/inbasekaran-s-106a90383",
       tint: "navy",
-    },
-    {
-      name: "Vinoth Nandakumar",
-      role: "Researcher",
-      focus: "PhD in Mathematics, MIT",
-      github: "https://github.com/bruce12-glitch",
-      scholar: scholarSearch("Vinoth Nandakumar"),
-      tint: "gold",
     },
   ],
   alumni: [],
