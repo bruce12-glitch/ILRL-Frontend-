@@ -8,7 +8,7 @@ export const SITE = {
   name: "Inference-in-Loop & Recurrence Lab",
   longName: "Inference in Loops and Recurrent Learning Labs",
   tagline: "Systems for efficient LLM inference, built in the loop.",
-  email: "hello@ilrl.dev",
+  email: "inba.research.ilrl.labs@gmail.com",
   github: "https://github.com/bruce12-glitch/ILRL",
   githubOrg: "https://github.com/bruce12-glitch",
   frontendRepo: "https://github.com/bruce12-glitch/ILRL-Frontend-",
@@ -157,6 +157,7 @@ export interface Person {
   focus: string;
   github: string;
   scholar: string;
+  linkedin?: string;
   tint: "navy" | "gold" | "cream";
   /** alumni only */
   now?: string;
@@ -181,6 +182,7 @@ export const PEOPLE: {
       focus: "LLM Inference and ML systems",
       github: "https://github.com/bruce12-glitch",
       scholar: scholarSearch("Inbasekaran S"),
+      linkedin: "https://www.linkedin.com/in/inbasekaran-s-106a90383",
       tint: "navy",
     },
   ],

@@ -1,7 +1,7 @@
 import { ArrowUpRight, GraduationCap, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "../components/icons";
 import { Reveal } from "../components/Reveal";
 import { Link } from "../router";
-import { GithubIcon } from "../components/icons";
 import { PEOPLE, SITE, type Person } from "../data/lab";
 import { cn } from "../utils/cn";
 
@@ -85,6 +85,18 @@ function PersonCard({ person, big }: { person: Person; big?: boolean }) {
           <GraduationCap size={15} />
           Scholar
         </a>
+        {person.linkedin && (
+          <a
+            href={person.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${person.name} on LinkedIn`}
+            className="inline-flex items-center gap-2 rounded-full border border-transparent px-2.5 py-1.5 font-mono text-[11px] text-inksoft transition-colors duration-200 hover:border-linedeep hover:text-ink"
+          >
+            <LinkedinIcon size={14} />
+            LinkedIn
+          </a>
+        )}
       </div>
     </article>
   );
