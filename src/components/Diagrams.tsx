@@ -189,6 +189,8 @@ export function AttentionMotif() {
         key={i} x={px} y={y} w={pw} h={ph}
         dx={5} dy={3} faces={faces} dashed={dashed}
         stroke={MUTE} strokeOpacity={0.4} shadow={!dashed}
+        className="kvpage"
+        style={{ "--del": `${(i * 320) % 2600}ms`, "--dur": `${6 + (i % 4)}s` } as CSSProperties}
       />
     );
   }
