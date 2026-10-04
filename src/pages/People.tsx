@@ -109,7 +109,8 @@ export default function People() {
         </div>
       </section>
 
-      {/* faculty & mentors */}
+      {/* faculty & mentors — hidden until real entries exist */}
+      {PEOPLE.faculty.length > 0 && (
       <section className="hairline-b">
         <div className={`${container} py-14 sm:py-16`}>
           <GroupHead
@@ -127,6 +128,7 @@ export default function People() {
           </div>
         </div>
       </section>
+      )}
 
       {/* team & students */}
       <section className="hairline-b">
@@ -165,7 +167,8 @@ export default function People() {
         </div>
       </section>
 
-      {/* alumni */}
+      {/* alumni — hidden until real entries exist */}
+      {PEOPLE.alumni.length > 0 && (
       <section className="hairline-b">
         <div className={`${container} py-14 sm:py-16`}>
           <GroupHead
@@ -200,6 +203,7 @@ export default function People() {
           </Reveal>
         </div>
       </section>
+      )}
 
       {/* join */}
       <section>
