@@ -166,8 +166,6 @@ const scholarSearch = (name: string) =>
     `"${name}"`
   )}`;
 
-const gh = (slug: string) => `https://github.com/${slug}`;
-
 export const PEOPLE: {
   faculty: Person[];
   team: Person[];
